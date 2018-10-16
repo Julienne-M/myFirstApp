@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  email: 'mon-email@gmail.com';
+
+  Email = {
+    quote : '',
+  };
 
   constructor() { }
 
