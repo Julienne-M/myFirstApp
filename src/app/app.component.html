@@ -10,6 +10,7 @@
     <li>Chou-fleur</li>
 </ul>
 <hr>
+<button type="text" (click)="changeGuestList()">Display Guest List</button>
 <ng-template [appDisplayGuests]="displayGuestList">
     <ul>
         <li>Brenda</li>
@@ -26,7 +27,8 @@
 <h1>My top 5 movies</h1>
 <ng-template [appDisplayMovies]="displayMovies">
     <ul>
-        <li [ngClass]="{'resizing': bestMovie}">The Green Mile (produced by Frank Darabont | writed by Stephen King)</li>
+        <!-- <li [ngClass]="{'resizing': bestMovie}">The Green Mile (produced by Frank Darabont | writed by Stephen King)</li> -->
+        <li appResizing>The Green Mile (produced by Frank Darabont | writed by Stephen King)</li>
         <li>12 Years a Slave (produced by John Ridley)</li>
         <li>War Horse (produced by Steven Spielberg)</li>
         <li>Schindler's List (produced by Steven Spielberg)</li>
