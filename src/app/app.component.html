@@ -1,2 +1,35 @@
-<app-menu></app-menu>
+<!-- <app-menu></app-menu>
 <router-outlet></router-outlet>
+<hr><hr><hr> -->
+<h1 appHighLight>Raclette Party</h1>
+<ul>
+    <li>Pommes de terre</li>
+    <li [ngStyle]="{backgroundColor: isThisIngredientVital ? 'red' : 'yellow'}">Raclette</li>
+    <li>Jambon</li>
+    <li [ngClass]="{'vital': isThisIngredientVital}">Cornichons</li>
+    <li>Chou-fleur</li>
+</ul>
+<hr>
+<ng-template [appDisplayGuests]="displayGuestList">
+    <ul>
+        <li>Brenda</li>
+        <li>Dylan</li>
+        <li>Jean-Mi</li>
+        <li>Kylie</li>
+    </ul>
+</ng-template>
+<hr>
+<ul *ngFor="let song of songList">
+    <li>{{ song }}</li>
+</ul>
+<hr>
+<h1>My top 5 movies</h1>
+<ng-template [appDisplayMovies]="displayMovies">
+    <ul>
+        <li [ngClass]="{'resizing': bestMovie}">The Green Mile (produced by Frank Darabont | writed by Stephen King)</li>
+        <li>12 Years a Slave (produced by John Ridley)</li>
+        <li>War Horse (produced by Steven Spielberg)</li>
+        <li>Schindler's List (produced by Steven Spielberg)</li>
+        <li>Pulp Fiction (produced by Quentin Tarantino)</li>
+</ul>
+</ng-template>
